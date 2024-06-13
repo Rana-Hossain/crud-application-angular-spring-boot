@@ -1,0 +1,24 @@
+<table class="table table-success table-striped">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">First Name</th>
+        <th scope="col">Last Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let employe of employee">
+        <th scope="row">{{employe.id}}</th>
+        <td>{{employe.firstname}}</td>
+        <td>{{employe.lastname}}</td>
+        <td>{{employe.email}}</td>
+        <td>
+          <button (click)="updateEmployee(employe.id)" class="btn btn-info" style="margin-right: 20px;">Update Info</button>
+          <button (click)="DeleteEmployee(employe.id)" class="btn btn-info" style="background-color: red; color: white;" >Delete</button>
+        </td>
+      </tr>
+      
+    </tbody>
+  </table>
